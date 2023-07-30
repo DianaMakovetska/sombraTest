@@ -107,10 +107,11 @@ export class MatchGrid {
 
         if (!result.length) {
           this.reset();
-          setTimeout(() => {
+
+          Sleep(100).then(() => {
             alert('You win');
             this.stop();
-          }, 0);
+          });
         }
       });
     }
@@ -151,9 +152,9 @@ export class MatchGrid {
   }
 
   onFinish() {
-    setTimeout(() => {
+    Sleep(100).then(() => {
       alert('You loose');
       this.stop();
-    }, 0);
+    });
   }
 }

@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let backColor = colorBackPicker.value;
   let selectedFont = fontPicker.value;
   let matchGrid;
+  let args;
 
   colorFrontPicker.addEventListener('input', () => {
     frontColor = colorFrontPicker.value;
@@ -37,15 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const height = parseInt(heightInput.value, 10);
     const timeLimit = parseInt(timeLimitInput.value, 10);
 
-    if ((numColumns * numRows) % 2 !== 0) {
-      alert('The number of cards must be even');
-      return;
-    }
-
-    if (matchGrid) {
-      matchGrid.reset();
-    }
-    matchGrid = new MatchGrid({
+    args = {
       numColumns: numColumns,
       numRows: numRows,
       width: width,
@@ -56,7 +49,18 @@ document.addEventListener('DOMContentLoaded', () => {
         backColor,
         font: selectedFont,
       },
-    });
+    };
+
+    if ((numColumns * numRows) % 2 !== 0) {
+      alert('The number of cards must be even');
+      return;
+    }
+
+    if (matchGrid) {
+      matchGrid.reset();
+    }
+
+    matchGrid = new MatchGrid(args);
 
     matchGrid.start();
   });
