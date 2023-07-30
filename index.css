@@ -1,0 +1,83 @@
+body {
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-size: 18px;
+}
+
+.filters {
+  display: flex;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+}
+
+.box > div {
+  display: flex;
+}
+
+.box label {
+  margin-right: 5px;
+}
+
+.btnActions {
+  margin-left: 30px;
+}
+
+.btnActions button:hover {
+  cursor: pointer;
+}
+
+.btnActions button {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100px;
+  height: 50px;
+}
+
+#game-container {
+  display: grid;
+  gap: 10px;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+}
+
+.front {
+  color: #fff;
+  background: #2196f3;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: rotateY(180deg);
+
+  color: #2196f3;
+  background: #fff;
+}

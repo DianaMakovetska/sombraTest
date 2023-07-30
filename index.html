@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="filters">
+      <div class="box">
+        <div>
+          <label for="numColumns">Number of Columns:</label>
+          <input type="number" id="numColumns" value="4" />
+        </div>
+
+        <div>
+          <label for="numRows">Number of Rows:</label>
+          <input type="number" id="numRows" value="4" />
+        </div>
+      </div>
+
+      <div class="box">
+        <div>
+          <label for="width">Width:</label>
+          <input type="number" id="width" value="800" />
+        </div>
+
+        <div>
+          <label for="height">Height:</label>
+          <input type="number" id="height" value="600" />
+        </div>
+      </div>
+
+      <div class="box">
+        <div>
+          <label for="colorFrontPicker">Choose Front Color:</label>
+          <input type="color" id="colorFrontPicker" value="#34d8eb" />
+        </div>
+        <div>
+          <label for="colorBackPicker">Choose Back Color:</label>
+          <input type="color" id="colorBackPicker" value="#fafafa" />
+        </div>
+      </div>
+
+      <div class="box">
+        <label for="timeLimit">Time Limit (seconds):</label>
+        <input type="number" id="timeLimit" value="60" />
+      </div>
+
+      <div class="box">
+        <label for="fontPicker">Choose Font:</label>
+        <select id="fontPicker">
+          <option value="Roboto">Roboto</option>
+          <option value="Arial">Arial</option>
+          <option value="Verdana">Verdana</option>
+        </select>
+      </div>
+
+      <div class="btnActions">
+        <button id="startButton">Start</button>
+        <button id="stopButton">End</button>
+      </div>
+    </div>
+
+    <h1 id="timerDisplay"></h1>
+
+    <div id="game-container"></div>
+    <script src="index.js" type="module"></script>
+    <script src="node_modules/animejs/lib/anime.min.js"></script>
+  </body>
+</html>
